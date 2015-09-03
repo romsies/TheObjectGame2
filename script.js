@@ -24,9 +24,13 @@ var Obj = function(name, modifier, description){
 
 
 //global items placeholder HERE
-var items = {
-  
-};
+var item = {
+	shield:new item("Shield",0.3,"This is an awesome shield!"),
+	chainMail:new item("chainMail", 1, "This should block a slap!"),
+  helmet:new item("helmet", .5, "This is a light weight helmet!"),
+	
+}
+
 
 var player = {
   name: "PlayerName",
