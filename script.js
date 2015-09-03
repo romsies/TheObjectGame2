@@ -25,9 +25,9 @@ var Obj = function (name, modifier, description) {
 
 //global items placeholder HERE
 var item = {
-  shield: new item("Shield", 0.3, "This is an awesome shield!"),
+  shield: new item("Shield", 3, "This is an awesome shield!"),
   chainMail: new item("chainMail", 1, "This should block a slap!"),
-  helmet: new item("helmet", .5, "This is a light weight helmet!"),
+  helmet: new item("helmet", 5, "This is a light weight helmet!"),
 
 }
 
@@ -49,6 +49,7 @@ var player = {
   },
   hit: function (damage) {
     this.health -= damage;
+    this.health -= (damage - (damage * this.addMods()));
     this.hits++;
     if (this.health <= 0) {
       this.health = 0;
@@ -60,6 +61,8 @@ var player = {
     this.hits = startingHits,
     update();
   },
+  
+  
   addMods: function () {
     var total;
     for (var i = 0; i < items.length; i++) {
