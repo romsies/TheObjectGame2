@@ -55,7 +55,11 @@ function update() {
   document.getElementById("hits").innerText = player.hits;
   
   //IF HEALTH STATEMENT
-  
+  if(player.health <= 0){
+		 document.getElementById("player-panel").classList.add("panel-danger")
+	}else{
+		 document.getElementById("player-panel").classList.remove("panel-danger")
+	}
   
 }
 
