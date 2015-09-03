@@ -55,7 +55,7 @@ function update() {
   document.getElementById("hits").innerText = player.hits;
   
   //IF HEALTH STATEMENT
-
+  
   
 }
 
