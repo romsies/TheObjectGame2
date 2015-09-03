@@ -36,6 +36,7 @@ var player = {
   name: "PlayerName",
   health: startingHealth,
   hits: startingHits,
+  items:[item.sheild, item.chainMail, item.helmet],
   
   slap: function() {
     this.hit(1);
